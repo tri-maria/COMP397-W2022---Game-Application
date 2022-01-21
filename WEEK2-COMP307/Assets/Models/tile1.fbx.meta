@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a0089cd6ee6e474cbc81f9ee985dad1
+guid: 630b737e3fb4ad64d88b7bc35e87aea0
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Pillar Material
-    second: {fileID: 2100000, guid: 3295676883817e348817eab900cd22f6, type: 2}
+      name: Concrete Material
+    second: {fileID: 2100000, guid: cd1f635f3f329044aa379b4d31f59844, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gravel Cobble Ground Material
+    second: {fileID: 2100000, guid: 97a01fb3dae833c44bf7920231d12f04, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -37,12 +42,12 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -52,7 +57,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

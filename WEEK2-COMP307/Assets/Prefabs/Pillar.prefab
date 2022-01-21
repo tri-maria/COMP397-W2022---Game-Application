@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2549190564335526472}
   - component: {fileID: 1965200157160016068}
   m_Layer: 0
-  m_Name: pillar
+  m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3129187677303601819, guid: 8415ff395d296474ba5757c0646eef40, type: 3}
+  - {fileID: 2100000, guid: b93c95c50ca6ee3438cf909327c5d2d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
