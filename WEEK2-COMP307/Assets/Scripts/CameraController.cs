@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     private float XRotation = 0.0f;
 
     // Start is called before the first frame update
+    //turn off the cursor
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -20,7 +21,7 @@ public class CameraController : MonoBehaviour
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
+        //x axis will rotate while y and z stays the same
         XRotation -= mouseY;
         XRotation = Mathf.Clamp(XRotation, -90.0f, 90.0f);
 
