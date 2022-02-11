@@ -6,17 +6,21 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public CharacterController controller;
 
-    [Header("Movement")] 
+    [Header("Movement")]
     public float maxSpeed = 10.0f;
     public float gravity = -30.0f;
     public float jumpHeight = 3.0f;
     public Vector3 velocity;
 
-    [Header("Ground Detection")] 
+    [Header("Ground Detection")]
     public Transform groundCheck;
     public float groundRadius = 0.5f;
     public LayerMask groundMask;
     public bool isGrounded;
+
+    [Header("Health System")]
+    public UIControls controls;
+    public bool isColliding = false;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    void OnDrawGizmos()
+    void onDrawGizmos()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
