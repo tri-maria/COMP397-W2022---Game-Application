@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 243570422}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,24 +1161,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &888301486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5352262762172890443, guid: 9b5f0e34e80255449a809db2c7b30b03, type: 3}
-  m_PrefabInstance: {fileID: 931910234560006684}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &888301492
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888301486}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.035736118, y: 0.015927887, z: 0.0358651}
-  m_Center: {x: 0, y: 0.0000075674625, z: 0.007932548}
 --- !u!20 &963194227 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5981911874007757292, guid: 58740a7229e6bf44082d31a683562105, type: 3}
@@ -1849,24 +1831,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 931910233595226091, guid: 9b5f0e34e80255449a809db2c7b30b03, type: 3}
   m_PrefabInstance: {fileID: 1082761778}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2075748153 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5352262762172890443, guid: 9b5f0e34e80255449a809db2c7b30b03, type: 3}
-  m_PrefabInstance: {fileID: 1082761778}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2075748159
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075748153}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.035736118, y: 0.015927887, z: 0.0358651}
-  m_Center: {x: 0, y: 0.0000075674625, z: 0.007932549}
 --- !u!1 &2088260158
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,10 +12,15 @@ public class UIControls : MonoBehaviour
     public Slider HealthBar;
     public TMP_Text HealthBarValue;
 
+   public void Start()
+    {
+        HealthBar.value = 20;
+    }
     public void OnStartButton_Pressed()
     {
         SceneManager.LoadScene("Main");
     }
+
 
     public void TakeDamage(int damage)
     {
