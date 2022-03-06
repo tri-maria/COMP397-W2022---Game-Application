@@ -33,43 +33,23 @@ public class MapGenerator : MonoBehaviour
     public void BuildMap()
     {
 
-        //Generate first 3 tiles
-        for (int i = 0; i < 3; i++)
-        {
-            var randomPrefabIndex = Random.Range(0, 4);
-            var randomRotation = Quaternion.Euler(0.0f, Random.Range(0, 4) * 90.0f, 0.0f);
-            tiles.Add(Instantiate(tilePrefabs[randomPrefabIndex], Vector3.zero, randomRotation, parent));
-           
-        }
-
-        tiles[1].transform.position = new Vector3(0.0f, 0.0f, 20.0f);
-        tiles[2].transform.position = new Vector3(20.0f, 0.0f, 20.0f);
-        tiles[3].transform.position = new Vector3(20.0f, 0.0f, 0.0f);
-
-        int count = 0;
         // generate more tiles if both width and depth are both greater than 2
-        if (width > 2 && depth > 2)
-        {
+        
             for (int row = 0; row <= depth; row++)
-            { 
-           
+            {
+
                 for (int col = 0; col <= width; col++)
-                    {
-                    count++;
+                {
+                    if (row == 1 && col == 1) { continue; }
 
-                    if (count > 2)
-                    {
-                        var randomPrefabIndex = Random.Range(0, 4);
-                        var randomRotation = Quaternion.Euler(0.0f, Random.Range(0, 4) * 90.0f, 0.0f);
-                        tiles.Add(Instantiate(tilePrefabs[randomPrefabIndex], new Vector3(col * 20.0f, 0.0f, row * 20.0f), randomRotation, parent)); 
-                    }
+                    var randomPrefabIndex = Random.Range(0, 4);
+                    var randomRotation = Quaternion.Euler(0.0f, Random.Range(0, 4) * 90.0f, 0.0f);
+                    var tilePositiion = new Vector3(col * 20.0f, 0.0f, row * 20.0f);
+                    tiles.Add(Instantiate(tilePrefabs[randomPrefabIndex], tilePositiion, randomRotation, parent));
+                }
 
-                    
-                    }
-             
-               
             }
-        }
+        
     }
 
     
