@@ -246,8 +246,8 @@ MonoBehaviour:
   - {fileID: 8723836559796012523, guid: 22a6acfbfd8e879468b4044adfc16799, type: 3}
   - {fileID: 4743702314665598821, guid: 301efb19bcbc0d64fb79f9d9dcae2bd3, type: 3}
   - {fileID: 8275816889450860986, guid: b537f799a0424264daf917dc7ac52474, type: 3}
-  width: 5
-  depth: 5
+  width: 2
+  depth: 2
   parent: {fileID: 1096418110}
   tiles:
   - {fileID: 2095881781}
