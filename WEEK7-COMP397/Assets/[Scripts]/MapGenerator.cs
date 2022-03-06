@@ -6,6 +6,8 @@ public class MapGenerator : MonoBehaviour
 {
     [Header("Tile Resources")]
     public List<GameObject> tilePrefabs;
+    public GameObject startTile;
+    public GameObject goalTile;
 
     [Header("Map Properties")]
     [Range(2, 30)]
@@ -35,7 +37,6 @@ public class MapGenerator : MonoBehaviour
         {
             ResetMap();
             BuildMap();
-
         }
     }
 
@@ -52,27 +53,44 @@ public class MapGenerator : MonoBehaviour
 
         tiles.Clear(); // removes all tiles
     }
+
+
     public void BuildMap()
     {
-        var offset = new Vector3( 20.0f, 0.0f, 20.0f);
+        var offset = new Vector3(20.0f, 0.0f, 20.0f);
+
+        // place the start tile
+        tiles.Add(Instantiate(startTile, Vector3.zero, Quaternion.identity, parent));
+
+        // choose a random goal position, cannot be equal the start and cannot be larger than the grid
+        var randomGoalRow = Random.Range(1, depth + 1);
+        var randomGoalCol = Random.Range(1, width + 1);
+
         // generate more tiles if both width and depth are both greater than 2
-
-        for (int row = 0; row <= depth; row++)
+        for (int row = 1; row <= depth; row++)
+        {
+            for (int col = 1; col <= width; col++)
             {
+                if (row == 1 && col == 1) { continue; }
 
-                for (int col = 0; col <= width; col++)
+                var tilePosition = new Vector3(col * 20.0f, 0.0f, row * 20.0f) - offset;
+
+                if (row == randomGoalRow && col == randomGoalCol)
                 {
-                    if (row == 1 && col == 1) { continue; }
-
+                    // place the goal tile
+                    tiles.Add(Instantiate(goalTile, tilePosition, Quaternion.identity, parent));
+                }
+                else
+                {
                     var randomPrefabIndex = Random.Range(0, 4);
                     var randomRotation = Quaternion.Euler(0.0f, Random.Range(0, 4) * 90.0f, 0.0f);
-                    var tilePositiion = new Vector3(col * 20.0f, 0.0f, row * 20.0f) - offset;
-                    tiles.Add(Instantiate(tilePrefabs[randomPrefabIndex], tilePositiion, randomRotation, parent));
+                    tiles.Add(Instantiate(tilePrefabs[randomPrefabIndex], tilePosition, randomRotation, parent));
                 }
 
             }
-        
-    }
 
-    
+        }
+
+
+    }
 }
