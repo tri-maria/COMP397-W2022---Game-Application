@@ -19,10 +19,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity + rightJoystick.Horizontal;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity + rightJoystick.Vertical;
+        //float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity + rightJoystick.Horizontal;
+        //float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity + rightJoystick.Vertical;
+        float mouseX = rightJoystick.Horizontal;
+        float mouseY = rightJoystick.Vertical;
 
-        XRotation -=mouseY;
+        XRotation -= mouseY;
         XRotation = Mathf.Clamp(XRotation, -90.0f, 90.0f);
 
         transform.localRotation = Quaternion.Euler(XRotation, 0.0f, 0.0f);

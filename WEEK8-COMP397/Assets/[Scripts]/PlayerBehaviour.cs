@@ -18,7 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    [Header("Onscreen Controller")]
+    [Header("Onscreen Controls")]
     public Joystick leftJoystick;
 
 
@@ -37,6 +37,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             velocity.y = -2.0f;
         }
+
+        
         //keyboard Input (fallback)
         float x = Input.GetAxis("Horizontal")+ leftJoystick.Horizontal;
         float z = Input.GetAxis("Vertical")+ leftJoystick.Vertical;
@@ -62,6 +64,14 @@ public class PlayerBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
     }
 
- 
+    public void onAbutton_Pressed()
+    {
+        if(isGrounded)
+
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+        }
+
+    } 
 
 }
