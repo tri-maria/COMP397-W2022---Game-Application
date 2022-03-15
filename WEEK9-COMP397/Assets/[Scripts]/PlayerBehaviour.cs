@@ -20,6 +20,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     [Header("Onscreen Controls")]
     public Joystick leftJoystick;
+    public GameObject onScreenControls;
+    public GameObject miniMap;
 
 
     // Start is called before the first frame update
@@ -56,7 +58,13 @@ public class PlayerBehaviour : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            //Toggle Minimap
+            miniMap.SetActive(miniMap.activeInHierarchy);
+        }
     }
+
 
     void OnDrawGizmos()
     {
@@ -64,7 +72,7 @@ public class PlayerBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
     }
 
-    public void onAbutton_Pressed()
+    public void onJumpButton_Pressed()
     {
         if(isGrounded)
 
@@ -73,5 +81,10 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
     } 
+
+    public void onMapButton_Pressed()
+    {
+        miniMap.SetActive(!miniMap.activeInHierarchy);
+    }
 
 }
