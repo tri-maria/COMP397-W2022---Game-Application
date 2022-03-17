@@ -4,6 +4,7 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
+//using Debug = UnityEngine.Debug;
 
 public class GameSaveManager : MonoBehaviour
 {
@@ -16,8 +17,8 @@ public class GameSaveManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
-             LoadGame();
-          
+            LoadGame();
+
         }
     }
     void SaveGame()
@@ -36,6 +37,7 @@ public class GameSaveManager : MonoBehaviour
         bf.Serialize(file, data);
         file.Close();
         Debug.Log("Game data saved!");
+        Debug.Log(JsonUtility.ToJson(data));
 
     }
 

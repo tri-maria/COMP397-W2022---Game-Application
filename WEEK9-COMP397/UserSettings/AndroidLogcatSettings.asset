@@ -11,12 +11,6 @@
         {
             "deviceId": "emulator-5554",
             "name": "ca.centennialcollege.comp397.lab8",
-            "processId": 6902,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.centennialcollege.comp397.lab8",
             "processId": 7164,
             "exited": true
         },
@@ -42,6 +36,12 @@
             "deviceId": "emulator-5554",
             "name": "ca.centennialcollege.comp397.lab9",
             "processId": 4828,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.centennialcollege.comp397.lab9",
+            "processId": 5442,
             "exited": true
         }
     ],
