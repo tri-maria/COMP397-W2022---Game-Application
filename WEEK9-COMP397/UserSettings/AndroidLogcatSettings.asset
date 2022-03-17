@@ -1,59 +1,47 @@
 {
     "m_SelectedDeviceId": "emulator-5554",
     "m_SelectedPackage": {
-        "deviceId": "emulator-5554",
-        "name": "ca.centennialcollege.comp397.lab8",
-        "processId": 7471,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "emulator-5554",
-            "name": "ca.centennialcollegecomp397W2022.lab8",
-            "processId": 5008,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.centennialcollegecomp397W2022.lab8",
-            "processId": 5227,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.centennialcollegecomp397W2022.lab8",
-            "processId": 5501,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "com.ldmnq.launcher3",
-            "processId": 1807,
-            "exited": false
-        },
-        {
-            "deviceId": "emulator-5554",
             "name": "ca.centennialcollege.comp397.lab8",
             "processId": 6424,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "emulator-5554",
             "name": "ca.centennialcollege.comp397.lab8",
             "processId": 6902,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "emulator-5554",
             "name": "ca.centennialcollege.comp397.lab8",
             "processId": 7164,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "emulator-5554",
             "name": "ca.centennialcollege.comp397.lab8",
             "processId": 7471,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.centennialcollege.comp397.lab9",
+            "processId": 3374,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.ldmnq.launcher3",
+            "processId": 1808,
             "exited": false
         }
     ],

@@ -18,7 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    [Header("Onscreen Controls")]
+    [Header("OnScreen Controls")]
     public Joystick leftJoystick;
     public GameObject onScreenControls;
     public GameObject miniMap;
@@ -28,6 +28,17 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        switch (Application.platform) 
+        {
+            case RuntimePlatform.Android:
+                //turn screen controls on
+                onScreenControls.SetActive(true);
+                break;
+            case RuntimePlatform.WebGLPlayer:
+            case RuntimePlatform.WindowsEditor:
+                onScreenControls.SetActive(false);
+                break;
+        }
     }
 
     // Update is called once per frame
