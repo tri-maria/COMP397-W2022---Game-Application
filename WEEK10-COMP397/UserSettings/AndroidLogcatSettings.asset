@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "emulator-5554",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "emulator-5554",
+        "name": "ca.centennialcollege.comp397.lab9",
+        "processId": 8540,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -43,6 +43,12 @@
             "name": "ca.centennialcollege.comp397.lab9",
             "processId": 5442,
             "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.centennialcollege.comp397.lab9",
+            "processId": 8540,
+            "exited": false
         }
     ],
     "m_Tags": {
