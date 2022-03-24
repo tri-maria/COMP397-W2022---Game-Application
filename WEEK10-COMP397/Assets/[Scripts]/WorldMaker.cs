@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WorldMaker : MonoBehaviour
 {
+    [Header("Player Properties")]
+    public GameObject playerPrefab;
+
     [Header("World Properties")]
     [Range(1, 16)]
     public int height = 1;
@@ -45,6 +48,7 @@ public class WorldMaker : MonoBehaviour
         Initialize();
         Reset();
         Regenerate();
+        PositionPlayer();
     }
 
     private void Initialize()
@@ -95,11 +99,11 @@ public class WorldMaker : MonoBehaviour
             Generate();
         }
 
-      /*  if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Generate();
         }
-      */
+      
     }
 
     private void Reset()
@@ -110,5 +114,12 @@ public class WorldMaker : MonoBehaviour
         }
 
         grid.Clear();
+    }
+
+    private void PositionPlayer()
+    {
+        playerPrefab.GetComponent<CharacterController>().enabled = false;
+        playerPrefab.transform.position = new Vector3(width * 0.5f, height + 10.0f, +depth * 0.5f);
+        playerPrefab.GetComponent<CharacterController>().enabled = true;
     }
 }

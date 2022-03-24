@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5060017038213221967}
   - component: {fileID: 5627582274971301273}
   - component: {fileID: 5449113632399339824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3DTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
